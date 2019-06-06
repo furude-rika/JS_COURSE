@@ -1,0 +1,13 @@
+.wrapper p {
+	text-align: center;
+	font-size: 20px;
+}
+
+.container img {
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	justify-content: space-around;
+}
