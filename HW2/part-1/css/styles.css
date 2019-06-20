@@ -1,0 +1,10 @@
+.container {
+	width: 60%;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.container h2 {text-align: center;}
+
+.container p {text-align: justify;}
