@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-4</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 2</h2>
+			<p>
+				Объявить конструктор LibraryBook, с помощью которого можно создавать и редактировать объекты, хранящие информацию о книгах в библиотеке
+			</p>
+			<p>
+				Приватные свойства объекта:
+			</p>
+			<ul>
+				<li>
+					title ( название книги )
+				</li>
+				<li>
+					year ( год издания )
+				</li>
+				<li>
+					author ( автор )
+				</li>
+				<li>
+					readerName ( кому выдана )
+				</li>
+				<li>
+					readerData ( когда выдана )
+				</li>
+			</ul>
+			<p>
+				Приватный метод  giveTheBook ( client ) - внесение изменений в свойства:
+			</p>
+			<ul>
+				<li>
+					readerName ( client )
+				</li>
+				<li>
+					readerData ( текущая дата )
+				</li>
+			</ul>
+			<p>
+				Публичные методы:
+			</p>
+			<ul>
+				<li>
+					getBookInfo () - посмотреть информацию о наличии книги ( вывести в консоль readerData )
+				</li>
+				<li>
+					<p>
+						getTheBook ( client ) -  получить книгу - проверка, что книга не выдана на руки (приватное свойство readerName должно быть пустой строкой )
+					</p>
+					<ul>
+						<li>
+							если выдана - вернуть null
+						</li>
+						<li>
+							если не выдана, то вызвать приватный метод giveTheBook ( client ) и вернуть bookTitle
+						</li>
+					</ul>
+				</li>
+				<li>
+					returnBook () - вернуть книгу сбросить значения приватных свойств readerName, readerData
+				</li>
+			</ul>
+		</div>	
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
