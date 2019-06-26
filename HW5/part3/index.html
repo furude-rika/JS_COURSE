@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-5</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 3</h2>
+			<p>
+				Напилите код функции generateError, такой, чтобы в результате работы кода:
+			</p><hr>
+			<div class="code">
+				<code>
+					<pre>
+function testArguments () {
+    function generateError ( numArgs ) {
+        ...
+    }
+    try {
+        arguments.length >= 3 ? null : generateError ( arguments.length )
+    } 
+    catch ( err ) {
+        console.error ( `${err.name}: ${err.message}\n${err.stack}` )
+    }
+}
+
+testArguments ( "Google" )
+					</pre>
+				</code>
+			</div>
+			<hr>
+			<p>
+				в консоли было сообщение от ошибке:
+			</p>
+				<div class="code">
+					<code>
+						<pre>
+► Application: Invalid arguments
+Function needs 3 arguments, but only 1 present
+						</pre>
+					</code>
+				</div>
+		</div>	
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

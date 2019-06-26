@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-5</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 2</h2>
+			<p>
+				Напилить код функции modificator, такой, чтобы в результате работы кода:
+			</p><hr>
+			<div class="code">
+				<code>
+					<pre>
+function sampleFunc () {
+    console.info ( `Symbols in my code: ${arguments.callee + 0}` )
+}
+
+function modificator ( func ) {
+    ...
+}
+
+modificator( sampleFunc )
+
+sampleFunc()			</pre>
+				</code>
+			</div>
+			<hr>
+			<p>
+				в консоль было выведено число символов в коде функции sampleFunc, т.е.:
+			</p>
+				<div class="code">
+					<code>
+						<pre>
+Symbols in my code: 93</pre>
+					</code>
+				</div>
+		</div>	
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
