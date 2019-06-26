@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-5</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 1</h2>
+			<p>
+				Напилить код функции modificator, такой, чтобы в результате работы кода:
+			</p><hr>
+			<div class="code">
+				<code>
+					<pre>
+function sampleFunc () {
+    console.log ( `${arguments.callee.name}:
+ 		${arguments[0]} | ${arguments[1]}` )
+}
+
+function modificator ( func ) {
+    ...
+}
+
+testFunc = modificator( sampleFunc )
+
+testFunc()			</pre>
+				</code>
+			</div>
+			<hr>
+			<p>
+				в консоли было:
+			</p>
+				<div class="code">
+					<code>
+						<pre>
+sampleFunc: test | sample</pre>
+					</code>
+				</div>
+		</div>	
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
