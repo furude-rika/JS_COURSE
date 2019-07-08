@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-8</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 3</h2>
+			<p>
+				Нужно сделать так, чтобы у всех экзепляров, созданных конструктором User, был унаследованный метод counter(), который считает созданные конструктором экземпляры
+			</p>
+			<p>
+				Каждый вызов конструктора увеличивает счетчик экземпляров на 1 и помещать новое значение счетчика в свойство id созданного экземпляра:
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+function User ( name ) {
+    this.name = name
+    this.id = this.counter()
+}
+
+...
+
+var users = [
+    new User ( "Семен" ),
+    new User ( "Антон" ),
+    new User ( "Демьян" ),
+    new User ( "Василий" )
+]
+					</pre>
+				</code>
+			</div>			
+			<p>
+				После выполнения кода:
+			</p>
+			<div class="code">
+				<code>
+					<pre>users[1].id = users[1].counter()</pre>
+				</code>
+			</div>
+			<p>
+				свойство id экземпляра не должно измениться, так же, как и значение счетчика
+			</p>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
