@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-10</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 1</h2>
+			<p>
+				Логирование поступающих сообщений в объекте log. Задан массив сообщений и пустой объект log:
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+let messages = [
+    "backspace",
+    "enter",
+    "shift",
+    "control",
+    "delete",
+    "space",
+    "subtract"
+]
+
+var log = {}		</pre>
+				</code>
+			</div>
+			<p>
+				Далее, есть функция, отправляющая сообщения в случайном порядке в случайное время:
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+var sendMessage = ( message, callback ) =>
+    setTimeout (
+        () => callback ( message ),
+        Math.random () * 7000
+    )				</pre>
+				</code>
+			</div>
+			<p>
+				Обратите внимание, что эта функция получает при вызове не только текст сообщения, но и кoллбэк-функцию, которой нужно передать это сообщение
+			</p>
+			<p>
+				С помощью кода:
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+messages.forEach (
+    message => sendMessage ( message, handler )
+)					</pre>
+				</code>
+			</div>
+			<p>
+				инициируем отправку сообщений
+			</p>
+			<p>
+				Ваша задача - напилить код функции handler,которая получает сообщение и заносит его в объект log в виде нового свойства, значение которого - текст поступившего сообщения, а ключ ( имя свойства ) - это время поступления сообщения ( в виде строки )
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+{
+    19:34:08: "control"
+    19:34:08[2]: "backspace"
+    19:34:09: "subtract"
+    19:34:09[2]: "enter"
+    19:34:11: "delete"
+    19:34:11[2]: "shift"
+}					</pre>
+				</code>
+			</div>
+			<p>
+				В помощь вам уже есть функция, которая формирует ключ очередного сообщения:
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+getKey = () => {
+    var key = new Date().toLocaleString().split(", ")[1]
+    return log [ key ] ? key + "[2]" : key
+}					</pre>
+				</code>
+			</div>
+			<p>
+				На случай, если два сообщения поступят одновременно, функция getKey добавляет "[2]" к значению ключа ( иначе значения ключей двух сообщений будут совпадать )
+			</p>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
