@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-10</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 2</h2>
+			<p>
+				Допилите код конструктора User, дополнив его акцессорами приватного свойства presence так, чтобы после выполнения скрипта:
+			</p>
+			<div class="code">
+				<code>
+					<pre>function User ( name ) {
+    this.name = name
+    var presence = false
+    ...
+}
+
+let user = new User ( "Ivan" )
+console.info ( user.presence )</pre>
+				</code>
+			</div>
+			<p>
+				в консоли было: "Ivan is absent"
+			</p>
+			<p>
+				а после выполнения кода:
+			</p>
+			<div class="code">
+				<code>
+					<pre>user.presence = "+"
+console.info ( user.presence )</pre>
+				</code>
+			</div>
+			<p>
+				в консоли было: "Ivan is present"
+			</p>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
