@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-9</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 2</h2>
+			<p>
+				Напилите код методов setUserPresent, showPresent и showAbsent
+			</p>
+			<div class="code">
+				<code>
+					<pre>var users = (
+    function ( list ) {
+        var users = []
+        for ( var user of list )
+            users.push ({
+                name: user,
+                present: false
+            })
+
+        return {
+            setUserPresent ( userName, present ) {
+                ...
+            },
+            showPresent () {
+                ...
+            },
+            showAbsent () {
+                ...
+            }
+        }
+    }
+)( [ "Иван", "Дмитрий", "Степан", "Михаил" ] )
+
+users.showAbsent()
+					</pre>
+				</code>
+			</div>		
+			<p>
+				После запуска кода результат в консоли должен быть таким:
+			</p>
+			<p class="code">
+				Иван <br>Дмитрий <br>Степан <br>Михаил
+			</p>
+			<p>
+				а после выполнения кода:
+			</p>
+			<div class="code">
+				<code>
+					<pre>users.setUserPresent( "Иван", "+" )
+users.setUserPresent( "Михаил", "присутствовал" )
+users.setUserPresent( "Степан", true )
+users.showPresent()</pre>
+				</code>
+			</div>
+			<p>
+				результат в консоли должен быть таким:
+			</p>
+			<p class="code">
+				Иван <br>Степан <br>Михаил
+			</p>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
