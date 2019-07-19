@@ -1,0 +1,14 @@
+.container {
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.container h2 {text-align: center;}
+
+.code {
+	background-color: #FFFFCC;
+	font-size: 80%;
+	padding: 2px;
+}
