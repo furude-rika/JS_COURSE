@@ -1,7 +1,7 @@
 let promise = new Promise(
 	(resolve, reject) => {
 		let response = new XMLHttpRequest()
-		response.open('GET', '')
+		response.open('GET', 'https://github.com/furude-rika/JS_COURSE/tree/master/HW11/part1/data.json')
 		response.onload = function(event) {
 			this.readyState === 4 && this.status === 200
 				? resolve(response.responseText) 
