@@ -1,13 +1,13 @@
 let promise = new Promise(
 	(resolve, reject) => {
 		let response = new XMLHttpRequest()
-		response.open('GET', 'https://github.com/furude-rika/JS_COURSE/tree/master/HW11/part1/data.json')
+		response.open('GET', '../data.json')
 		response.onload = function(event) {
 			this.readyState === 4 && this.status === 200
 				? resolve(response.responseText) 
 					: reject(response.responseText)
 		}
-		responce.send()
+		response.send()
 	}
 )
 	.then(
@@ -18,5 +18,4 @@ let promise = new Promise(
 for (var x of respData) {
 	document.body.appendChild(document.createElement('img')).src = x.ref
 	document.body.appendChild(document.createElement('h2')).innerHTML = x.title
-	
 }
