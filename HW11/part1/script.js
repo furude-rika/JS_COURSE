@@ -9,13 +9,14 @@ let promise = new Promise(
 		}
 		response.send()
 	}
-)
-	.then(
-		response => respData = JSON.parse(data.json),
+).then(
+		response => {
+			respData = JSON.parse(data.json)
+			for (var x of respData) {
+				document.body.appendChild(document.createElement('img')).src = x.ref
+				document.body.appendChild(document.createElement('h2')).innerHTML = x.title
+			}
+		},
 		error => console.warn(error)
 	)
  
-for (var x of respData) {
-	document.body.appendChild(document.createElement('img')).src = x.ref
-	document.body.appendChild(document.createElement('h2')).innerHTML = x.title
-}
