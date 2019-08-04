@@ -1,22 +1,15 @@
-let promise = new Promise(
-	(resolve, reject) => {
-		let response = new XMLHttpRequest()
-		response.open('GET', '../data.json')
-		response.onload = function(event) {
-			this.readyState === 4 && this.status === 200
-				? resolve(response.responseText) 
-					: reject(response.responseText)
-		}
-		response.send()
-	}
-).then(
-		response => {
-			respData = JSON.parse(data.json)
-			for (var x of respData) {
-				document.body.appendChild(document.createElement('img')).src = x.ref
-				document.body.appendChild(document.createElement('h2')).innerHTML = x.title
-			}
-		},
-		error => console.warn(error)
-	)
- 
+let response = new XMLHttpRequest()
+response.open('GET','data.json')
+response.onreadystatechange = function(event) {
+   if (this.readyState === 4 && this.status === 200) {
+       let resp = JSON.parse(this.responseText)
+        resp.forEach(elem => {
+            for (var x in resp) {
+                document.body.appendChild(document.createElement('img')).src = elem.ref
+                document.body.appendChild(document.createElement('h2')).innerHTML = elem.title
+            }
+        }) 
+    }
+}
+
+response.send()
