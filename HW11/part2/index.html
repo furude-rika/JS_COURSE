@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-11</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 2</h2>
+			<p>Исходные данные:</p>
+			<div class="code">
+				<code>
+					<pre>
+var messages = [
+    "backspace",
+    "enter",
+    "shift",
+    "control",
+    "delete",
+    "space",
+    "subtract"
+]
+
+messages.getKey = () => {
+    var key = new Date().toLocaleString().split(", ")[1]
+    return log [ key ] ? log [ key + "[2]" ] ? key + "[3]" : key + "[2]" : key
+}
+
+var log = {}		</pre>
+				</code>
+			</div>
+			<p>sendMessage:</p>
+			<div class="code">
+				<code>
+					<pre>
+var sendMessage = message => new Promise (
+    resolve => setTimeout (
+        () => resolve ( message ),
+        Math.random () * 7000
+    )
+)					</pre>
+				</code>
+			</div>
+			<p>
+				Задача: напилить код, который вызывает функцию sendMessage для каждого элемента массива messages и логирует полученные сообщения в объекте log следующим образом:
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+{
+    22:25:57: "backspace"
+    22:25:58: "shift"
+    22:25:59: "subtract"
+    22:25:59[2]: "enter"
+    22:25:59[3]: "delete"
+    22:26:01: "control"
+    22:26:01[2]: "space"
+}					</pre>
+				</code>
+			</div>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
