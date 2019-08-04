@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework-11</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<h2>Задание 3</h2>
+			<p>
+				Изменим условие предыдущего задания <br><br>Массив messages, объект log и функция sendMessage остаются теми же
+			</p>
+			<p>Немного изменится метод getKey:</p>
+			<div class="code">
+				<code>
+					<pre>messages.getKey = () => new Date().toLocaleString().split(", ")[1]</pre>
+				</code>
+			</div>
+			<p>
+				Нужно напилить код рекурсивной функции recursive, которая вызывает sendMessage поочередно с каждым элементом массива messages, но только после того, как предыдущий месседж будет залогирован в объекте log
+			</p>
+			<div class="code">
+				<code>
+					<pre>
+var sendAll = () => {
+    var index = 0
+    function recursive () {
+        ...
+    }
+    recursive ()
+}
+
+sendAll()			</pre>
+				</code>
+			</div>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
