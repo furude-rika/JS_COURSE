@@ -12,7 +12,7 @@ var sendAll = () => {
     function recursive () {
        sendMessage(messages[index++])
             .then(item => log[messages.getKey()] = item)
-            index <= messages.length ? recursive() : null
+            index < messages.length ? recursive() : null
         }
     recursive ()
 }
